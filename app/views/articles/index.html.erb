@@ -1,0 +1,11 @@
+<h1>Articles index</h1>
+<h2>Retrouvez ici nos articles</h2>
+<% @articles.each do |article| %>
+  <div>
+    <h3>
+      <a><%= link_to "voir l'article #{article.title}", article_path(article) %></a>
+    </h3>
+    <p><%= article.content %></p>
+  </div>
+<% end %>
+<div><%= link_to "Create a article", new_article_path %></div>
